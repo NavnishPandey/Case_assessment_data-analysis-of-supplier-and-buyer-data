@@ -228,19 +228,7 @@ The RFQ similarity pipeline (`RFQSimilarityAnalyzer` in `task_B.py`) performs a 
 
 8. **Outputs**:
    - **top3.csv** — Top-3 similarity matches per RFQ.
-
-
-## 📂 Project Structure
-│
-├── Task_A/
-│ ├── task_A1.py # InventoryDataProcessor implementation
-│ ├── pycache/ # cache files
-│
-├── Task_B/ # (for Scenario B, not covered here)
-│ ├── task_b.py
-│
-├── run.py # Entry point to execute pipelines
-├── README.md # Documentation 
+ 
 
 # 🚀 Running the Full Pipeline: Task A & Task B
 

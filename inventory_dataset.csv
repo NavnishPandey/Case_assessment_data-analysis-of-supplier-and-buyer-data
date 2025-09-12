@@ -1,0 +1,52 @@
+article_id,data_source,material_type,grade,quality_choice,finish,thickness_mm,width_mm,weight_kg,quantity,reserved,description,coating,has_mechanical_data,rp02,rm,ag,ai,total_weight_kg,available_quantity,processing_date,processing_time
+unknown,supplier_1,C200S,C200S,3rd,gebeizt und geglüht,2.77,1100.0,8047.5,0,False,Längs- oder Querisse,UNKNOWN,True,333.6,606.2,16.11,0.0054,0.0,0,2025-09-12,16:35:36
+23048203,supplier_2,HDC,HDC,unknown,oiled,1.0,1000.0,9037.0,52,False,Material is Oiled,NONE,False,,,,,469924.0,52,2025-09-12,16:35:36
+23040547,supplier_2,S235JR,S235JR,unknown,oiled,1.0,1000.0,9037.0,41,False,Material is Oiled,NONE,False,,,,,370517.0,41,2025-09-12,16:35:36
+23046057,supplier_2,S235JR,S235JR,unknown,unknown,1.0,1000.0,9162.0,28,False,Material is Painted,NONE,False,,,,,256536.0,28,2025-09-12,16:35:36
+23041966,supplier_2,DX51D,DX51D,unknown,oiled,1.0,1000.0,9037.0,66,False,Material is Oiled,AZ150,False,,,,,596442.0,66,2025-09-12,16:35:36
+23043884,supplier_2,HDC,HDC,unknown,unknown,1.0,1000.0,9037.0,26,False,Material is Painted,NONE,False,,,,,234962.0,26,2025-09-12,16:35:36
+23048868,supplier_2,DX51D,DX51D,unknown,oiled,1.0,1000.0,9037.0,60,False,Material is not Oiled,Z140,False,,,,,542220.0,60,2025-09-12,16:35:36
+23046459,supplier_2,HDC,HDC,unknown,oiled,1.0,1000.0,9037.0,93,False,Material is Oiled,NONE,False,,,,,840441.0,93,2025-09-12,16:35:36
+23043788,supplier_2,HDC,HDC,unknown,oiled,1.0,1000.0,9037.0,73,False,Material is Oiled,NONE,False,,,,,659701.0,73,2025-09-12,16:35:36
+23044935,supplier_2,S235JR,S235JR,unknown,oiled,1.0,1000.0,9037.0,60,False,Material is Oiled,NONE,False,,,,,542220.0,60,2025-09-12,16:35:36
+23049059,supplier_2,DX51D,DX51D,unknown,oiled,1.0,1000.0,9037.0,95,False,Material is not Oiled,Z140,False,,,,,858515.0,95,2025-09-12,16:35:36
+23047860,supplier_2,HDC,HDC,unknown,oiled,1.0,1000.0,9037.0,59,False,Material is not Oiled,NONE,False,,,,,533183.0,59,2025-09-12,16:35:36
+23047939,supplier_2,DX51D,DX51D,unknown,unknown,1.0,1000.0,9217.0,72,False,Material is Painted,AZ150,False,,,,,663624.0,72,2025-09-12,16:35:36
+23047348,supplier_2,S235JR,S235JR,unknown,oiled,1.0,1000.0,9037.0,36,False,Material is not Oiled,NONE,False,,,,,325332.0,36,2025-09-12,16:35:36
+23045961,supplier_2,HDC,HDC,unknown,unknown,1.0,1000.0,9037.0,30,False,Material is Painted,NONE,False,,,,,271110.0,30,2025-09-12,16:35:36
+23042649,supplier_2,S235JR,S235JR,unknown,unknown,1.0,1000.0,9037.0,71,False,Material is Painted,NONE,False,,,,,641627.0,71,2025-09-12,16:35:36
+23048176,supplier_2,S235JR,S235JR,unknown,oiled,1.0,1000.0,9037.0,54,False,Material is not Oiled,NONE,False,,,,,487998.0,54,2025-09-12,16:35:36
+23043667,supplier_2,S235JR,S235JR,unknown,unknown,1.0,1000.0,9037.0,10,False,Material is Painted,NONE,False,,,,,90370.0,10,2025-09-12,16:35:36
+23046190,supplier_2,HDC,HDC,unknown,oiled,1.0,1000.0,9037.0,58,False,Material is not Oiled,NONE,False,,,,,524146.0,58,2025-09-12,16:35:36
+23044291,supplier_2,S235JR,S235JR,unknown,oiled,1.0,1000.0,9037.0,22,False,Material is not Oiled,NONE,False,,,,,198814.0,22,2025-09-12,16:35:36
+23046841,supplier_2,S235JR,S235JR,unknown,oiled,1.0,1000.0,9037.0,94,False,Material is Oiled,NONE,False,,,,,849478.0,94,2025-09-12,16:35:36
+23041008,supplier_2,S235JR,S235JR,unknown,oiled,1.0,1000.0,9037.0,33,False,Material is Oiled,NONE,False,,,,,298221.0,33,2025-09-12,16:35:36
+23041560,supplier_2,S235JR,S235JR,unknown,oiled,1.0,1000.0,9037.0,98,False,Material is Oiled,NONE,False,,,,,885626.0,98,2025-09-12,16:35:36
+23043638,supplier_2,HDC,HDC,unknown,unknown,1.0,1000.0,9037.0,12,False,Material is Painted,NONE,False,,,,,108444.0,12,2025-09-12,16:35:36
+23041902,supplier_2,DX51D,DX51D,unknown,oiled,1.0,1000.0,9037.0,72,False,Material is Oiled,AZ150,False,,,,,650664.0,72,2025-09-12,16:35:36
+23049627,supplier_2,DX51D,DX51D,unknown,oiled,1.0,1000.0,9037.0,82,False,Material is not Oiled,AZ150,False,,,,,741034.0,82,2025-09-12,16:35:36
+23044610,supplier_2,HDC,HDC,unknown,oiled,1.0,1000.0,9037.0,96,False,Material is not Oiled,NONE,False,,,,,867552.0,96,2025-09-12,16:35:36
+23049106,supplier_2,DX51D,DX51D,unknown,oiled,1.0,1000.0,9037.0,34,False,Material is not Oiled,Z140,False,,,,,307258.0,34,2025-09-12,16:35:36
+23048028,supplier_2,S235JR,S235JR,unknown,unknown,1.0,1000.0,6113.0,29,False,Material is Painted,NONE,False,,,,,177277.0,29,2025-09-12,16:35:36
+23045099,supplier_2,DX51D,DX51D,unknown,oiled,1.0,1000.0,9037.0,78,False,Material is Oiled,AZ150,False,,,,,704886.0,78,2025-09-12,16:35:36
+23046741,supplier_2,S235JR,S235JR,unknown,oiled,1.0,1000.0,9037.0,31,False,Material is not Oiled,NONE,False,,,,,280147.0,31,2025-09-12,16:35:36
+23047239,supplier_2,DX51D,DX51D,unknown,unknown,1.0,1000.0,9037.0,21,False,Material is Painted,Z140,False,,,,,189777.0,21,2025-09-12,16:35:36
+23049907,supplier_2,DX51D,DX51D,unknown,oiled,1.0,1000.0,9037.0,33,False,Material is Oiled,AZ150,False,,,,,298221.0,33,2025-09-12,16:35:36
+23044447,supplier_2,S235JR,S235JR,unknown,unknown,1.0,1000.0,9037.0,67,False,Material is Painted,NONE,False,,,,,605479.0,67,2025-09-12,16:35:36
+23047489,supplier_2,HDC,HDC,unknown,oiled,1.0,1000.0,9037.0,64,False,Material is not Oiled,NONE,False,,,,,578368.0,64,2025-09-12,16:35:36
+23040273,supplier_2,S235JR,S235JR,unknown,oiled,1.0,1000.0,7025.0,33,False,Material is not Oiled,NONE,False,,,,,231825.0,33,2025-09-12,16:35:36
+23040905,supplier_2,DX51D,DX51D,unknown,unknown,1.0,1000.0,9037.0,76,False,Material is Painted,Z140,False,,,,,686812.0,76,2025-09-12,16:35:36
+23043967,supplier_2,DX51D,DX51D,unknown,oiled,1.0,1000.0,9037.0,62,False,Material is not Oiled,Z140,False,,,,,560294.0,62,2025-09-12,16:35:36
+23045724,supplier_2,S235JR,S235JR,unknown,unknown,1.0,1000.0,9037.0,68,False,Material is Painted,NONE,False,,,,,614516.0,68,2025-09-12,16:35:36
+23049672,supplier_2,HDC,HDC,unknown,oiled,1.0,1000.0,9037.0,93,False,Material is not Oiled,NONE,False,,,,,840441.0,93,2025-09-12,16:35:36
+23049617,supplier_2,DX51D,DX51D,unknown,oiled,1.0,1000.0,9037.0,62,False,Material is Oiled,AZ150,False,,,,,560294.0,62,2025-09-12,16:35:36
+23043836,supplier_2,DX51D,DX51D,unknown,unknown,1.0,1000.0,9355.0,64,False,Material is Painted,AZ150,False,,,,,598720.0,64,2025-09-12,16:35:36
+23049333,supplier_2,S235JR,S235JR,unknown,unknown,1.0,1000.0,9037.0,78,False,Material is Painted,NONE,False,,,,,704886.0,78,2025-09-12,16:35:36
+23041897,supplier_2,HDC,HDC,unknown,oiled,1.0,1000.0,9037.0,62,False,Material is Oiled,NONE,False,,,,,560294.0,62,2025-09-12,16:35:36
+23040756,supplier_2,S235JR,S235JR,unknown,oiled,1.0,1000.0,6034.0,50,False,Material is not Oiled,NONE,False,,,,,301700.0,50,2025-09-12,16:35:36
+23041086,supplier_2,DX51D,DX51D,unknown,oiled,1.0,1000.0,9037.0,95,False,Material is Oiled,AZ150,False,,,,,858515.0,95,2025-09-12,16:35:36
+23047543,supplier_2,DX51D,DX51D,unknown,oiled,1.0,1000.0,9940.0,96,False,Material is not Oiled,Z140,False,,,,,954240.0,96,2025-09-12,16:35:36
+23045292,supplier_2,DX51D,DX51D,unknown,unknown,1.0,1000.0,9037.0,51,False,Material is Painted,AZ150,False,,,,,460887.0,51,2025-09-12,16:35:36
+23047408,supplier_2,S235JR,S235JR,unknown,oiled,1.0,1000.0,5302.0,12,False,Material is Oiled,NONE,False,,,,,63624.0,12,2025-09-12,16:35:36
+23043348,supplier_2,DX51D,DX51D,unknown,oiled,1.0,1000.0,9037.0,69,False,Material is Oiled,Z140,False,,,,,623553.0,69,2025-09-12,16:35:36
+23043386,supplier_2,HDC,HDC,unknown,oiled,1.0,1000.0,9037.0,75,False,Material is not Oiled,NONE,False,,,,,677775.0,75,2025-09-12,16:35:36
