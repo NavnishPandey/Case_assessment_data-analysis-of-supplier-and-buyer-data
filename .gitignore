@@ -2,3 +2,5 @@ taskA_data/
 taskB_data/
 
 env
+
+__pycache__/

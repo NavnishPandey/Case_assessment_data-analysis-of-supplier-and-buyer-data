@@ -125,7 +125,7 @@ The file `inventory_dataset_cleaning_report.txt` includes:
  - Comprehensive documentation of assumptions, statistics, and cleaning decisions.  
 
 
- ## 📑 Task B — RFQ Similarity Analysis
+ ## 📌 Task B — RFQ Similarity Analysis
 
 The RFQ similarity pipeline (`RFQSimilarityAnalyzer` in `task_B.py`) performs a complete analysis of RFQ data, including reference enrichment, feature engineering, similarity computation, and optional advanced analyses. The pipeline is executed via `run.py` after Task A.
 
@@ -259,4 +259,4 @@ All tasks are orchestrated via the `run.py` script.
 - Required libraries installed:
   ```bash
   pip install requirements.txt
-  
+
