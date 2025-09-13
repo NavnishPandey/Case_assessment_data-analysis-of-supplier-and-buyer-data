@@ -125,110 +125,108 @@ The file `inventory_dataset_cleaning_report.txt` includes:
  - Comprehensive documentation of assumptions, statistics, and cleaning decisions.  
 
 
- ## 📌 Task B — RFQ Similarity Analysis
+ # 📌 Task B — RFQ Similarity Analysis
 
-The RFQ similarity pipeline (`RFQSimilarityAnalyzer` in `task_B.py`) performs a complete analysis of RFQ data, including reference enrichment, feature engineering, similarity computation, and optional advanced analyses. The pipeline is executed via `run.py` after Task A.
-
----
-
-### B.1 Reference Join & Missing Values (25 pts)
-
-- **Normalize grade keys**:  
-  - Uppercase, strip spaces, handle optional suffixes.  
-  - Map aliases to standard grades (e.g., `S235`, `235JR` → `S235JR`).  
-
-- **Parse range strings**:  
-  - Convert numeric ranges (e.g., `"200-250"`) into `min`, `max`, and optional `mid`.  
-  - Handle inequalities (`≤`, `≥`) and single-value strings.  
-
-- **Join RFQs with reference properties**:  
-  - Use normalized grades for joining.  
-  - Handle missing reference values via flagging or median imputation.  
+The RFQ similarity pipeline (`RFQSimilarityPipeline` in `task_b.py`) performs a complete analysis of RFQ data, including reference enrichment, feature engineering, and similarity computation. The pipeline is executed via `run.py` after Task A.
 
 ---
 
-### B.2 Feature Engineering (20 pts)
+## B.1 Reference Join & Missing Values (25 pts)
+
+- **Grade normalization** (`task_b1.py`):  
+  - Converts grades to uppercase.  
+  - Strips spaces and standardizes naming.  
+  - Handles suffixes and aliases.  
+
+- **Range parsing** (`task_b1.py`):  
+  - Converts numeric ranges (e.g., `"200-250"`) into `min`, `max`, and `mid`.  
+  - Handles inequalities (`≤`, `≥`) and single values.  
+
+- **Reference join** (`task_b1.py`):  
+  - Joins RFQs with `reference_properties.tsv` using normalized grades.  
+  - Flags RFQs with missing reference entries.  
+  - Keeps missing values as `NaN` for transparency.  
+
+- **Output**:  
+  - `rfq_enriched.csv`
+
+---
+
+## B.2 Feature Engineering (20 pts)
+
+Implemented in `task_b2.py`.
 
 - **Dimensions**:  
-  - Represent each dimension as an interval (`min`, `max`).  
-  - Singletons: `min = max`.  
-  - Suggest overlap metric: IoU (Intersection over Union).  
+  - Represented as intervals (`min`, `max`).  
+  - If only one value is given → `min = max`.  
+  - Overlap metric: *Intersection over Union (IoU)*.  
 
 - **Categorical features**:  
-  - `coating`, `finish`, `form`, `surface_type` similarity = exact match (1/0).  
+  - Exact-match similarity (1/0) for `coating`, `finish`, `form`, `surface_type`.  
 
 - **Grade properties**:  
-  - Use numeric midpoints of ranges (`_mid`).  
-  - Ignore sparse features if present in <20% of RFQs.  
+  - Midpoints of numeric ranges from reference data are used as features.  
+  - Sparse features (missing in most RFQs) are dropped.  
 
-- **Documented outputs**:  
-  - `engineered_df` contains all features ready for similarity calculations.  
+- **Output**:  
+  - Feature-engineered dataframe passed to similarity calculation.  
 
-### B.3 Similarity Calculation (30 pts)
+---
+
+## B.3 Similarity Calculation (30 pts)
+
+Implemented in `task_b3.py`.
 
 - **Aggregate similarity score**:  
-  - Weighted combination of dimension IoU, categorical matches, and grade similarity.  
-  - Default weights: dimensions 0.4, categorical 0.3, grade 0.3.  
+  - Weighted combination of three components:  
+    - Dimensions (IoU) → weight **0.4**  
+    - Categorical matches → weight **0.3**  
+    - Grade similarity → weight **0.3**  
 
 - **Top-3 matches**:  
-  - Exclude self and exact duplicates.  
-  - Output CSV: `top3.csv`  
-    ```
-    Columns: [rfq_id, match_id, similarity_score]
-    ```
+  - Each RFQ is compared against all others.  
+  - Self-matches and exact duplicates are excluded.  
+  - Top-3 most similar RFQs are stored.  
+
+- **Output format** (`top3.csv`):  
+
 
 ---
 
-### Bonus / Stretch Goals
+## Bonus / Stretch Goals
 
 - **Ablation analysis**:  
-  - Compare similarity when dropping feature groups: dimensions only, grade only, etc.  
-  - Adjust weights to test feature importance.  
+- Run similarity using only subsets of features (dimensions only, grade only).  
+- Compare impact on results.  
 
 - **Alternative metrics**:  
-  - Weighted cosine + Jaccard similarity versus IoU or other approaches.  
-  - Document metric definitions and results.  
+- Test cosine similarity or Jaccard similarity alongside IoU.  
 
 - **Clustering**:  
-  - Group RFQs into families using KMeans on numeric + one-hot embeddings.  
-  - Provide cluster summaries with dominant grades, coatings, forms, and dimension patterns.  
+- Apply clustering on engineered features to group RFQs.  
+- Summarize clusters by dominant grade, form, and dimension ranges.  
 
 ---
 
-### Pipeline Structure (`task_B.py`)
+## Pipeline Structure (`task_b.py`)
 
-1. **Initialization**:  
-   - Load RFQ CSV and reference TSV.  
-   - Normalize grades and enrich RFQs with reference properties.  
+1. **Initialization**  
+ - Loads `rfq.csv` and `reference_properties.tsv`.  
+ - Calls `task_b1` for reference join and preprocessing.  
 
-2. **Data preprocessing**:  
-   - Parse range strings, handle missing values, flag incomplete reference data.  
+2. **Feature Engineering**  
+ - Calls `task_b2` to transform dimensions, categorical, and grade properties into engineered features.  
 
-3. **Feature engineering**:  
-   - Ensure dimension intervals.  
-   - Encode categorical features.  
-   - Keep grade properties present in ≥20% of RFQs.  
+3. **Similarity Calculation**  
+ - Calls `task_b3` to compute similarity matrices.  
+ - Aggregates similarity scores using weighted average.  
+ - Extracts top-3 matches per RFQ.  
 
-4. **Similarity matrices**:  
-   - Dimension IoU  
-   - Categorical exact match  
-   - Grade property similarity (scaled Euclidean distance → similarity)  
+4. **Outputs**  
+ - `rfq_enriched.csv` — RFQs joined with reference properties  
+ - `top3.csv` — Top-3 most similar RFQs per line  
 
-5. **Aggregate similarity**:  
-   - Weighted average of dimension, categorical, and grade similarity.  
-
-6. **Generate top-3 matches**:  
-   - Saved to `top3.csv`  
-   - Returned as `DataFrame` for further use.  
-
-7. **Bonus analyses**:  
-   - **Ablation**: test impact of feature groups/weights.  
-   - **Alternative metrics**: cosine, Jaccard, hybrid.  
-   - **Clustering**: group RFQs, summarize cluster patterns.  
-
-8. **Outputs**:
-   - **top3.csv** — Top-3 similarity matches per RFQ.
- 
+---
 
 # 🚀 Running the Full Pipeline: Task A & Task B
 

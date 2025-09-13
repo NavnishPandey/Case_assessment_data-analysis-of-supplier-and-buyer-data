@@ -52,11 +52,11 @@ def run_task_a():
 def run_task_b():
     """Runs Task B - RFQ Similarity Analysis."""
     try:
-        analyzer = RFQSimilarityAnalyzer(
-            rfq_file=RFQ_FILE,
-            reference_file=REFERENCE_FILE,
+        RFQSimilarityAnalyzer(
+            RFQ_FILE,
+            REFERENCE_FILE,
         )
-        analyzer.run_complete_analysis()
+        
 
         print("\n✅ Task B Complete - RFQ similarity analysis finished!")
 

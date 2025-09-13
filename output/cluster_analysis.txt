@@ -1,0 +1,33 @@
+RFQ CLUSTER ANALYSIS
+==================================================
+
+Cluster_0:
+  Size: 112 RFQs
+  Common Grades: {'16MnCrS5': 12, 'S235JR': 11, 'DC01': 6}
+  Common Forms: {'Round Bars': 35, 'Coils': 15, 'Strips': 14}
+  Common Coatings: {'Z140': 3, 'ZF090': 2, 'ZM430': 2}
+
+Cluster_1:
+  Size: 526 RFQs
+  Common Grades: {'S235JR': 58, 'S355MC': 56, 'S500MC': 27}
+  Common Forms: {'Coils': 306, 'Sheets': 75, 'Plates': 57}
+  Common Coatings: {'ZM310': 4, 'ZM35/35': 3, 'GD': 2}
+
+Cluster_2:
+  Size: 1 RFQs
+  Common Grades: {'S355': 1}
+  Common Forms: {'Seamless Round Tubes': 1}
+  Common Coatings: {}
+
+Cluster_3:
+  Size: 1 RFQs
+  Common Grades: {}
+  Common Forms: {'Sheets': 1}
+  Common Coatings: {}
+
+Cluster_4:
+  Size: 365 RFQs
+  Common Grades: {'DX51D': 90, 'DC01': 45, 'DX54D': 23}
+  Common Forms: {'Coils': 297, 'Sheets': 26, 'Round Bars': 6}
+  Common Coatings: {'Z275': 39, 'Z100': 33, 'ZE25/25': 25}
+
