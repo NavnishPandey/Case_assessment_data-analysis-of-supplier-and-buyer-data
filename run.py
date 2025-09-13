@@ -1,12 +1,12 @@
 from Task_A.task_A1 import clean_and_join_inventory
 from Task_B.task_b import RFQSimilarityAnalyzer
 
-SUPPLIER1_FILE = r"C:\Users\Alka\Documents\Case_assessment_data-analysis-of-supplier-and-buyer-data\taskA_data\supplier_data1.xlsx"
-SUPPLIER2_FILE = r"C:\Users\Alka\Documents\Case_assessment_data-analysis-of-supplier-and-buyer-data\taskA_data\supplier_data2.xlsx"
+SUPPLIER1_FILE = r"Case_assessment_data-analysis-of-supplier-and-buyer-data\taskA_data\supplier_data1.xlsx"
+SUPPLIER2_FILE = r"Case_assessment_data-analysis-of-supplier-and-buyer-data\taskA_data\supplier_data2.xlsx"
 OUTPUT_FILE = "inventory_dataset.csv"
 
-RFQ_FILE = r"C:\Users\Alka\Documents\Case_assessment_data-analysis-of-supplier-and-buyer-data\taskB_data\rfq.csv"
-REFERENCE_FILE = r"C:\Users\Alka\Documents\Case_assessment_data-analysis-of-supplier-and-buyer-data\taskB_data\reference_properties.tsv"
+RFQ_FILE = r"Case_assessment_data-analysis-of-supplier-and-buyer-data\taskB_data\rfq.csv"
+REFERENCE_FILE = r"Case_assessment_data-analysis-of-supplier-and-buyer-data\taskB_data\reference_properties.tsv"
 
 
 def run_task_a():
